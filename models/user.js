@@ -15,8 +15,7 @@ const userSchema = new Schema({
     },
     googleId: {
         type: String,
-        unique: false,
-        sparse: true,
+        default: null,
     },
     name: {
         type: String,
