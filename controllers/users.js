@@ -1,5 +1,5 @@
 const User = require("../models/user.js");
-
+const { v4: uuidv4 } = require('uuid');
 
 module.exports.renderSignupForm = (req, res) =>{
     res.render("users/signup.ejs");
@@ -10,7 +10,7 @@ module.exports.signup = async(req, res) =>{
     try{
     let {username, email, password, googleId} = req.body;
     // Check if a user with the same googleId exists (for Google signups)
-    if (googleId) {
+    if (googleId != null) {
         const existingGoogleUser = await User.findOne({ googleId });
         if (existingGoogleUser) {
             req.flash("error", "This Google account is already linked to a user.");
@@ -23,7 +23,8 @@ module.exports.signup = async(req, res) =>{
            req.flash("error", "This email is already registered.");
            return res.redirect("/signup");
     }
-    const newUser = new User({email, username, googleId});
+    const newGoogleId = googleId ? googleId : uuidv4();
+    const newUser = new User({email, username, googleId: newGoogleId});
     //register(user, password, cb) Convenience method to register a new user instance with a given password. Checks if username is unique. See login example.
     const registereduser = await User.register(newUser, password);
     console.log(registereduser);
@@ -47,7 +48,7 @@ module.exports.renderLoginForm = (req, res) =>{
 }
 
 module.exports.login = async(req, res) =>{
-    req.flash("success", "login successfully!");
+    req.flash("success", `${req.user.username} login successfully!` || `${req.user.name} login successfully!` );
     //res.redirect("/listings");
     let redirectUrl = res.locals.redirectUrl || "/listings";
     res.redirect(redirectUrl);
