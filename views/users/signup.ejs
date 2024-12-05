@@ -1,0 +1,56 @@
+<!-- 
+
+<div class="row mt-3">
+    <h1 class="col-6 offset-4">Signup to Airvillas</h1>
+    <div class="col-6 offset-3">
+        <form action="/signup" method="post" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username: </label>
+                <input type="text" name="username" id="username" class="form-control" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email: </label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password </label>
+                <input type="password" name="password" id="password" class="form-control" required>
+            </div>
+            <button class="btn btn-success">Signup</button>
+        </form>
+    </div>
+</div> -->
+
+<%- layout("/layouts/boilerplate") %>
+
+<div class="signup-container">
+    <div class="signup-wrapper">
+        <h1 class="signup-title">Signup to Airvillas</h1>
+        <form action="/signup" method="post" class="needs-validation signup-form" novalidate>
+            <div class="form-group">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
+            </div>
+
+            <button class="btn btn-signup">Signup</button>
+        </form>
+        <div class="login-redirect">
+            <span>Already have an account?</span>
+            <a href="/login" class="login-link">Login</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-brands fa-airbnb"></i> <span class="logotext">airvillas</span></a>
+      <div class="newsearch"></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item explore"> 
+            <a class="nav-link" href="/listings">Explore your Stays</a>
+          </li>
+        </ul>
+        <div class="navbar-nav ms-auto" id="searchnav">
+          <form class="d-flex" role="search" action="/listings/search" method="get">
+            <input class="form-control me-2 search-input" type="search" placeholder="Search destinations" name="query">
+            <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <ul class="navbar-nav ms-auto" id="lastoption">
+          <li class="nav-item addhometext">
+            <a class="nav-link " href="/listings/new">Add your home</a>
+          </li>
+          <% if(!currUser){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup"> <b>signup</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login"><b>login</b></a>
+          </li>
+        <% } %>
+        <% if(currUser){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout"><b>logout</b></a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>

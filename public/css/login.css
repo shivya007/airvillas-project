@@ -1,0 +1,128 @@
+
+/* Login Container */
+.login-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto 0px auto;
+}
+
+/* Login Title */
+.login-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #6b8afd;
+    outline: none;
+    box-shadow: 0 0 5px rgba(107, 138, 253, 0.5);
+}
+/* Login Button */
+button.btn-login {
+    width: 100%;
+    background: linear-gradient(90deg, #ff5a5f, #fc5860, #fe424d);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 10px rgba(255, 90, 95, 0.3); /* Soft shadow effect */
+}
+
+button.btn-login:hover {
+    color: white;
+    background: linear-gradient(90deg, #ff767a, #fe5f64, #fe424d);
+    box-shadow: 0 6px 12px rgba(255, 90, 95, 0.5); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Signup Link */
+.signup-link {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.signup-link a {
+    color: #fe424d;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #fe424d;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    color: #aaa;
+    margin: 1rem 0;
+}
+
+/* Google Button */
+a.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1.5px solid black;
+    color: #444;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.8rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a.btn-google i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+a.btn-google:hover {
+    border: 1.5px solid black;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+}

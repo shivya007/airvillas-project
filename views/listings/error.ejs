@@ -1,0 +1,19 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container mt-5 text-center">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="alert alert-danger d-flex flex-column align-items-center py-5 shadow-lg" role="alert" aria-live="assertive">
+        <!-- Icon for the error message -->
+        <div>
+          <i class="<%= err.status === 404 ? 'fas fa-exclamation-circle' : 'fas fa-exclamation-triangle' %> fa-3x mb-3 text-warning"></i>
+        </div>
+        <!-- Error code and message -->
+        <h1 class="display-4 text-danger">Error <%= err.status || 500 %></h1>
+        <p class="mt-3"><%= err.message || "Something went wrong. Please try again or contact support if the issue persists." %></p>
+        <!-- Navigation button -->
+        <a href="<%= err.redirect || '/listings' %>" class="btn btn-danger mt-4">Go to Homepage</a>
+      </div>
+    </div>
+  </div>
+</div>

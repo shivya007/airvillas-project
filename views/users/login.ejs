@@ -1,0 +1,61 @@
+<!-- 
+
+<div class="row mt-3">
+    <h1 class="col-6 offset-4">Login to Airvillas</h1>
+    <div class="col-6 offset-3">
+        <form action="/login" method="post" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username: </label>
+                <input type="text" name="username" id="username" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password </label>
+                <input type="password" name="password" id="password" class="form-control" required>
+            </div>
+            <button class="btn btn-success">login</button>
+        </form>
+        <br>
+        <span>Don't have an account?</span> <a href="/signup">Signup</a>
+        <p>OR</p>
+        <hr>
+        <div id="auth-account">
+            <a href="/auth/google">
+                <div>Continue with Google&nbsp;&nbsp;&nbsp;</div>
+            </a>
+        <div>
+    </div>
+</div> -->
+
+
+
+
+
+<%- layout("/layouts/boilerplate") %>
+
+<div class="login-container">
+    <div class="login-form">
+        <h1 class="login-title">Login to Airvillas</h1>
+        <form action="/login" method="post" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
+            </div>
+            <button class="btn btn-login">Login</button>
+        </form>
+        <div class="signup-link">
+            <span>Don't have an account?</span> <a href="/signup">Signup</a>
+        </div>
+        <p class="divider">OR</p>
+        <hr>
+        <div id="auth-account">
+            <a href="/auth/google" class="btn btn-google">
+                <i class="fa-brands fa-google"> </i> Continue with Google
+            </a>
+        </div>
+    </div>
+</div>

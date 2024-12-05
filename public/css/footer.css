@@ -1,0 +1,115 @@
+/* Footer Styles */
+footer.footer {
+    background-color: rgb(246, 239, 239);
+    color: #fff;
+    padding: 2rem 1rem;
+    font-family: 'Arial', sans-serif;
+    border-top: 3px solid white;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.footer-about h3 {
+    color: #fe424d;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;
+}
+
+/* Quick Links Section */
+.footer-links h4 {
+    color: #fe424d;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fe424d;
+}
+
+/* Social Media Section */
+.footer-socials h4 {
+    color: #fe424d;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-socials i {
+    font-size: 2rem;
+    margin-right: 0.8rem;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials i:hover {
+    color: #fe424d;
+    transform: scale(1.2);
+}
+
+/* Legal Information */
+.footer-legal h4 {
+    color: #fe424d;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-legal ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-legal li {
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.footer-legal a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: #fe424d;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: black;
+}

@@ -1,0 +1,198 @@
+.filtersdiv{
+  box-sizing: border-box;
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+.filters{
+    height: 100px;
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    /*Set the overflow-y: hidden; and overflow-x: auto; which will automatically hide the vertical scroll bar and present only the horizontal scrollbar*/
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+}
+div.rightbtn{
+  position: relative;
+  right: 17px;
+}
+.filters::-webkit-scrollbar {
+    display: none;
+}
+  .filter{
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    opacity: 0.7;
+  }
+  .filter:hover{
+    opacity: 1;
+    cursor: pointer;
+  } 
+
+  #slideButton {
+    background-color: rgba(254, 66, 77, 0.09);
+    color: black;
+    padding: 5px 12px;
+    border-radius: 50%;
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out; /* Smooth transition for effects */
+}
+
+#slideButton:hover {
+  background-color: rgba(254, 66, 77, 0.05); /* Add a very faint red background */
+    color: black; /* Text color contrast */
+    box-shadow: 0px 4px 15px rgba(254, 66, 77, 0.5); /* Add a glowing shadow effect */
+}
+
+
+
+.filtertext{
+  text-decoration: none;
+  color: black;
+}
+
+  .taxinfo {
+    font-size: 1.5rem; /* Match displayprice size */
+    font-weight: 500; /* Slightly bold for readability */
+    color: gray; /* Subtle color to differentiate it */
+    display: none; /* Hidden by default, as per requirements */
+    transition: all 0.3s ease-in-out; /* Smooth effects */
+    position: relative;
+    background: rgba(255, 255, 255, 0.7); /* Faint background for visibility */
+    padding: 0.5rem 1rem; /* Add subtle padding for better spacing */
+    border-radius: 0.3rem; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1; /* Ensure it appears on top */
+    margin: 5px;
+}
+.taxinfo:hover {
+  background-color: rgba(254, 66, 77, 0.1); /* Faint red background on hover */
+  color: black; /* Make text prominent */
+  border: 1px solid rgba(254, 66, 77, 0.2); /* Border effect */
+  
+}
+
+
+  .tax-toggle {
+    height: 3rem;
+    width: 800px;
+    padding: 1.5rem 1rem; /* Balanced padding for aesthetics */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center-align content */
+    border: 1px solid black;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    background: transparent; /* Transparent background */
+    transition: all 0.4s ease-in-out; /* Smooth transition for effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    text-decoration: none; /* Remove underline for links, if any */
+}
+
+.tax-toggle:hover {
+    border-color: #fe424d; /* Change border color to red */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 10px rgba(254, 66, 77, 0.3); /* Enhanced shadow effect */
+    background-color: rgba(254, 66, 77, 0.05); /* Add a very faint red background */
+}
+
+.tax-toggle:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow for active state */
+}
+
+
+
+  .displayprice {
+    height: 45px;
+    width: 298px;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; /* Base color */
+    background-color: #f5f5f5; /* Light background to make the text pop */
+    padding: 0.5rem 1rem;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .displayprice:hover {
+    height: 70px;
+    width: 298px;
+    color: #fe424d; /* Change color on hover */
+    background-color: #eaeaea; /* Slightly darker background */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  }
+  
+  .displayprice::before {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 0.3rem;
+  }
+  
+  .displayprice:hover::after {
+    content: " (Special Offer!)"; /* Add a message on hover */
+    font-size: 0.9rem;
+    color: #fe424d;
+    font-weight: 500;
+    display: block;
+    margin-top: 0.5rem;
+  }
+  
+
+
+
+
+
+/* 
+/*media*/
+/* 
+@media (max-width: 576px) and (min-width: 300px){
+  .filtersdiv{
+    position: relative;
+  }
+  .tax-toggle{
+    padding: 30px 10px 30px 10px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .changetext{
+    margin: auto;
+    font-size: 0.5rem;
+    height: 23px;
+    width: 70px;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+  }
+  .tooglediv2{
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    width: 70px;
+  }
+  input.form-check-input{
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  #slideButton{
+    background-color: white;
+    
+  }
+}
+ */

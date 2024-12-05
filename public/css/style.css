@@ -1,0 +1,763 @@
+body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+/*         background-color: blue; */
+    }
+html, body{
+    width: 100vw;
+    overflow-x:hidden;
+}
+      
+.container{
+    flex: 1;
+}           
+
+/*Navbar*/
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-airbnb{
+    color: #fe424d;
+    font-size: 2.5rem;
+}
+button.btn-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Compact, circular button size */
+    height: 50px;
+    background-color: #fe424d; /* Eye-catching red background */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Circular shape */
+    color: white; /* Icon color */
+    font-size: 1.2rem; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 10px rgba(254, 66, 77, 0.3); /* Subtle glow */
+}
+
+button.btn-search:hover {
+    background-color: #f23b46; /* Slightly darker red on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    color: white; /* Icon color */
+    box-shadow: 0 6px 15px rgba(254, 66, 77, 0.5); /* Intense glow */
+}
+
+button.btn-search:active {
+    transform: scale(0.95); /* Pressed-down effect */
+    box-shadow: 0 3px 8px rgba(254, 66, 77, 0.2); /* Softer glow */
+}
+
+button.btn-search i {
+    transition: transform 0.3s ease; /* Smooth animation for icon */
+}
+
+button.btn-search:hover i {
+    transform: rotate(5deg); /* Add slight rotation on hover */
+}
+
+button.btn-search:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 4px 15px rgba(254, 66, 77, 0.5); /* Glow on focus */
+}
+
+input.search-input {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 400px; /* Limit the width for better design */
+    padding: 10px 15px; /* Add padding for a comfortable look */
+    font-size: 1rem; /* Make the text readable */
+    color: #333; /* Neutral text color */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 25px; /* Smooth rounded corners */
+    background-color: #f9f9f9; /* Light background for a clean look */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for hover and focus */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    outline: none; /* Remove default focus outline */
+}
+
+input.search-input::placeholder {
+    color: #999; /* Light gray placeholder text */
+    font-style: italic; /* Placeholder in italics */
+}
+
+input.search-input:hover {
+    background-color: #fff; /* Brighten background on hover */
+    border-color: #fe424d; /* Highlight border on hover */
+    box-shadow: 0 4px 10px rgba(254, 66, 77, 0.3); /* Add a glowing effect */
+}
+
+input.search-input:focus {
+    background-color: #fff; /* Keep background bright */
+    border-color: #fe424d; /* Highlight border on focus */
+    box-shadow: 0 4px 15px rgba(254, 66, 77, 0.5); /* More intense glowing effect */
+    color: #000; /* Make text bold */
+}
+
+input.search-input:focus::placeholder {
+    color: #ccc; /* Dim the placeholder on focus */
+}
+
+
+
+
+/*home page*/
+.logotext{
+    color: #fe424d;
+    font-weight: bold;
+    font-size: 1.7rem;
+    letter-spacing: -1px;
+}
+
+.nav-link{
+    color: #222222 !important;
+    
+}
+
+.explore, .addhometext {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    padding: 0.2rem 1rem; /* Adjusted padding for a professional look */
+    border: 1px solid black;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    
+    color: black;
+    background: transparent; /* Transparent background */
+    transition: all 0.4s ease-in-out; /* Smooth transition for effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-decoration: none;
+    text-align: center;
+}
+
+.explore:hover, .addhometext:hover {
+    color: #fe424d; /* Eye-catching text color on hover */
+    border-color: #fe424d; /* Highlighted border */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 10px rgba(254, 66, 77, 0.3); /* Enhanced shadow */
+    
+    background-color: rgba(254, 66, 77, 0.05); /* Add a very faint red background */
+}
+
+.explore:active, .addhometext:active {
+    transform: translateY(1px); /* Button presses in slightly */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow for active state */
+}
+
+.hovering:hover{
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color:rgb(128, 128, 128, 0.1);   
+}
+
+.listingtitle{
+    height: 150px;
+    width: 296px;
+}
+.listingtitle p {
+    margin: 2px 0; /* Reduce the space between paragraphs */
+}
+
+
+
+/*footer*/
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.f-info-links, 
+.f-info-socials,
+.f-info-brand{
+    width: 100%;
+    background-color: #fe424d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    flex-wrap: wrap;
+}
+
+/*Cards*/
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Subtle shadow */
+}
+.card-body{
+    padding: 0 !important;
+
+}
+.card-text p{
+    font-weight: 400;
+}
+.listing-link{
+    text-decoration: none;
+}
+
+/*Card Effect*/
+
+.card-img-top:hover{
+    opacity: 0.96;
+    transform: scale(0.97);
+}
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+/*Edit page*/
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+.submit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/*Map*/
+#map { 
+    height: 400px;
+    width: 90vh;
+
+}
+
+
+
+
+@media (min-width: 766px) and (max-width: 1199px) {
+    .changetext{
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    .tooglediv2{
+        width: 120px;
+    }
+}
+
+
+ @media (min-width: 300px) and (max-width: 576px) {
+    .navbar {
+     /*  background-color: grey; */
+      width: 100%;
+      height: 60px;
+    }
+    .navbar-brand{
+        font-size: 0px !important;
+/*         background-color: yellow; */
+        height: 40px;
+        width: 80px;
+    }
+    .fa-brands, .logotext{
+        font-weight: 500;
+        font-size: 22px;
+    }
+    .filtersdiv{
+        background-color:white;
+        padding: 0px;
+        margin: -12px;
+       
+    }
+    #slideButton i{
+        font-size: 15px;
+        width: 12px;
+        height: 15px;
+    }
+    div#slideButton.leftbtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 30px;
+    }
+    div#slideButton.rightbtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 30px;
+    }
+    div.filters{
+        height: 50px;
+        font-size: 12px;
+    }
+    .changetext{
+        font-size: 7px;
+        height: 23px;
+        width: 100px;
+        position: relative;
+        left: 11px;
+    }
+ 
+  div.tax-toggle{
+/*     background-color: orange; */
+    padding: 20px 5px 20px 5px;
+    height: 10px;
+    width: 140px;
+  }
+  .tooglediv2{
+/*     background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    width: 100px;
+  }
+  .form-check-input{
+/*     background-color: brown; */
+    font-size: 15px;
+  } 
+
+
+    .container-fluid{
+/*         background-color: crimson; */
+        height: 50px;
+        width: 100vw;
+    }
+
+    #navbarNav > ul:nth-child(1){
+        display: none;
+    }
+    .navbar-nav {
+        margin-top: 10px;
+    }
+
+
+    #lastoption{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .newsearch{
+        height: 50px;
+        width: 190px;
+        display: inline-block;
+    }
+    input.search-input{
+        width: 150px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px; /* Add padding for a comfortable look */
+        font-size: 0.7rem; /* Make the text readable */
+        text-align: center; 
+        border-radius: 40px; /* Smooth rounded corners */
+        /* background-color: blueviolet; */
+    }
+    button.btn-search{
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+    }
+    button.btn-search i{
+        font-size: 12px;
+    }
+    .navbar-toggler{
+/*         background-color: green; */
+        width: 32px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    .allimgs{
+/*         background-color: green !important; */
+        display: block;
+        margin-top: 20px !important;
+    }
+
+    .showheading {
+/*         background-color: yellow; */
+        display: inline-block; /* To wrap the text only */
+        margin: 20px auto;
+        padding: 10px 20px; 
+        text-align: center; 
+        font-size: 18px; 
+        font-weight: bold; 
+        font-family: 'Arial', sans-serif; 
+        border-radius: 8px;
+        max-width: 100%; /* Restrict width to the viewport */
+    }
+    #listingoneimage{
+/*         background-color: yellow; */
+        height: 700px;
+        display: inline-block; /* To wrap the text only */
+        margin-top: 20px;
+        padding: 10px 20px; 
+        text-align: center; 
+        font-size: 18px; 
+        font-weight: bold; 
+        font-family: 'Arial', sans-serif; 
+        border-radius: 8px;
+    }
+    .show-img{
+        height: 400px;
+        width: 100%;
+/*         background-color: green; */
+    }
+    .allreviews{
+/*         background-color: pink; */
+        margin-top: 30px;
+        font-size: 10px;
+        width: 375px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .whitereviewbox{
+/*         background-color: green; */
+        width: 300px;
+    }
+    #showdetails{
+/*         background-color: brown; */
+        width:100%;
+        margin: 0px auto;
+    }
+    #map{ 
+        width: 85vw;
+    }
+    .mainmapdiv{
+/*         background-color: green; */
+        margin-top: 20px;
+        margin-left: 0%;
+        padding: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .navbar {
+     /*  background-color: grey; */
+      width: 100%;
+      height: 60px;
+    }
+    .navbar-brand{
+        font-size: 0px !important;
+/*         background-color: yellow; */
+        height: 40px;
+        width: 80px;
+    }
+    .fa-brands, .logotext{
+        font-weight: 550;
+        font-size: 25px;
+    }
+    .filtersdiv{
+        background-color:white;
+        padding: 0px;
+        margin: -12px;
+       
+    }
+    #slideButton i{
+        font-size: 15px;
+        width: 12px;
+        height: 15px;
+    }
+    div#slideButton.leftbtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 35px;
+    }
+    div#slideButton.rightbtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 35px;
+    }
+    div.filters{
+        height: 50px;
+        font-size: 15px;
+    }
+    .changetext{
+/*         background-color: red; */
+        font-size: 9px;
+        width: 100px;
+        margin-left: auto;
+        text-align: center;
+    }
+ 
+  div.tax-toggle{
+/*     background-color: orange;  */
+/*     padding: 30px 5px 30px 5px; */
+    height: 54px;
+    width: 140px;
+  }
+  .tooglediv2{
+/*     background-color: green;  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    width: 100px;
+  }
+  .form-check-input{
+ /*    background-color: brown; */
+    font-size: 20px;
+  } 
+
+
+    .container-fluid{
+/*        background-color: crimson;  */
+        height: 50px;
+        width: 100vw;
+    }
+
+    #navbarNav > ul:nth-child(1){
+        display: none;
+    }
+    .navbar-nav {
+        margin-top: 10px;
+    }
+
+
+    #lastoption{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .newsearch{
+/*         background-color: red; */
+        height: 50px;
+        width: 390px;
+    }
+    input.search-input{
+        width: 350px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px; /* Add padding for a comfortable look */
+        font-size: 0.7rem; /* Make the text readable */
+        text-align: center; 
+        border-radius: 40px; /* Smooth rounded corners */
+        /* background-color: blueviolet; */
+    }
+    button.btn-search{
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+    }
+    button.btn-search i{
+        font-size: 12px;
+    }
+    .navbar-toggler{
+/*         background-color: green; */
+        width: 32px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    .allimgs{
+/*         background-color: green !important; */
+        display: block;
+        margin-top: 20px !important;
+    }
+
+    .showheading {
+/*         background-color: yellow; */
+        display: inline-block; /* To wrap the text only */
+        margin: 20px auto;
+        padding: 10px 20px; 
+        text-align: center; 
+        font-size: 18px; 
+        font-weight: bold; 
+        font-family: 'Arial', sans-serif; 
+        border-radius: 8px;
+        max-width: 100%; /* Restrict width to the viewport */
+    }
+    #listingoneimage{
+/*         background-color: yellow; */
+        height: 700px;
+        display: inline-block; /* To wrap the text only */
+        margin-top: 20px;
+        padding: 10px 20px; 
+        text-align: center; 
+        font-size: 18px; 
+        font-weight: bold; 
+        font-family: 'Arial', sans-serif; 
+        border-radius: 8px;
+    }
+    .show-img{
+        height: 400px;
+        width: 100%;
+/*         background-color: green; */
+    }
+    .allreviews{
+/*         background-color: pink; */
+        margin-top: 30px;
+        font-size: 10px;
+        width: 375px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .whitereviewbox{
+/*         background-color: green; */
+        width: 300px;
+    }
+    #showdetails{
+/*         background-color: brown; */
+        width:100%;
+        margin: 0px auto;
+    }
+    #map{ 
+        width: 75vw;
+    }
+    .mainmapdiv{
+/*         background-color: green; */
+        margin-top: 20px;
+        margin-left: 0%;
+        padding: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 341px) {
+    
+    .fa-brands, .logotext{
+        font-weight: 550;
+        font-size: 18px;
+    }
+    
+    .newsearch{
+        height: 40px;
+        width: 150px;
+        margin-left: -40px;
+    }
+    .navbar-nav.ms-auto.newsearch{
+        position: relative;
+        width: 140px;
+        height: 10px;
+        margin: auto;
+    }
+    input.search-input{
+        width: 120px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 5px; /* Add padding for a comfortable look */
+        font-size: 0.57rem; /* Make the text readable */
+        text-align: center; 
+        border-radius: 40px; /* Smooth rounded corners */
+        /* background-color: blueviolet; */
+    }
+    
+    button.btn-search{
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+    }
+    button.btn-search i{
+        font-size: 12px;
+    }
+}
+@media (min-width: 768px) and (max-width: 980px) {
+    .navbar-brand{
+        font-size: 0px !important;
+/*         background-color: yellow; */
+        height: 40px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .fa-brands, .logotext{
+        font-weight: 550;
+        font-size: 16px;
+    }
+    
+.explore, .addhometext {
+    height: 40px;
+    width: 150px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out; /* Smooth transition for effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-decoration: none;
+    text-align: center;
+}
+a.nav-link{
+    font-size: 12px;
+}
+#searchnav{
+    width: 250px;
+}
+input.search-input{
+    font-size: 15px;
+}
+}
+
+
