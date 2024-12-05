@@ -8,8 +8,22 @@ module.exports.renderSignupForm = (req, res) =>{
 
 module.exports.signup = async(req, res) =>{
     try{
-    let {username, email, password} = req.body;
-    const newUser = new User({email, username});
+    let {username, email, password, googleId} = req.body;
+    // Check if a user with the same googleId exists (for Google signups)
+    if (googleId) {
+        const existingGoogleUser = await User.findOne({ googleId });
+        if (existingGoogleUser) {
+            req.flash("error", "This Google account is already linked to a user.");
+            return res.redirect("/signup");
+        }
+    }
+    // Check if a user with the same email exists
+    const existingEmailUser = await User.findOne({ email });
+    if (existingEmailUser) {
+           req.flash("error", "This email is already registered.");
+           return res.redirect("/signup");
+    }
+    const newUser = new User({email, username, googleId});
     //register(user, password, cb) Convenience method to register a new user instance with a given password. Checks if username is unique. See login example.
     const registereduser = await User.register(newUser, password);
     console.log(registereduser);
@@ -20,7 +34,7 @@ module.exports.signup = async(req, res) =>{
         req.flash("success", `${username} registered successfully!`);
         res.redirect("/listings");
 
-    })
+    })  
     }
     catch(e){
         req.flash("error", e.message);
